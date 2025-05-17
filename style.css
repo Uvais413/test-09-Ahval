@@ -1,0 +1,134 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa, #c5cae9); /* Light and inviting background gradient */
+    color: #444;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1000px; /* Slightly wider container */
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 10px; /* Rounded corners for a modern look */
+}
+
+.module {
+    margin-bottom: 40px;
+    padding: 25px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light background for modules */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Subtle hover effect */
+}
+
+.module:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.module h2 {
+    color: #3f51b5; /* Primary color */
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3f51b5;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.module p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.play-button {
+    background-color: #4caf50; /* Success color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #43a047;
+}
+
+.more-read {
+    color: #00bcd4; /* Accent color */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.more-read:hover {
+    text-decoration: underline;
+    color: #0097a7;
+}
+
+.pdf-tab {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.pdf-tab h3 {
+    color: #f44336; /* Error/Alert color */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.pdf-link {
+    color: #f44336;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.pdf-link:hover {
+    text-decoration: underline;
+    color: #d32f2f;
+}
+
+.feedback-section {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 2px solid #ffc107; /* Warning/Feedback color */
+    border-radius: 8px;
+    background-color: #fffde7; /* Light background for feedback */
+}
+
+.feedback-section h2 {
+    color: #ffc107;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feedback-section p {
+    color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+    .module {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    .play-button, .more-read {
+        margin-right: 10px;
+        margin-bottom: 5px; /* Add some space below inline elements on smaller screens */
+        display: inline-block; /* Prevent them from stacking too much */
+    }
+}
