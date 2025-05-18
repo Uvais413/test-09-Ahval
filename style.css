@@ -2,18 +2,18 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #e0f7fa, #c5cae9); /* Light and inviting background gradient */
+    background: linear-gradient(135deg, #e0f7fa, #c5cae9);
     color: #444;
     line-height: 1.7;
 }
 
 .container {
-    max-width: 1000px; /* Slightly wider container */
+    max-width: 1000px;
     margin: 50px auto;
     padding: 30px;
     background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer shadow */
-    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .module {
@@ -21,8 +21,8 @@ body {
     padding: 25px;
     border: 1px solid #eee;
     border-radius: 8px;
-    background-color: #f9f9f9; /* Light background for modules */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Subtle hover effect */
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .module:hover {
@@ -31,7 +31,7 @@ body {
 }
 
 .module h2 {
-    color: #3f51b5; /* Primary color */
+    color: #3f51b5;
     margin-top: 0;
     margin-bottom: 15px;
     border-bottom: 2px solid #3f51b5;
@@ -43,25 +43,56 @@ body {
     color: #555;
     margin-bottom: 20px;
 }
-
-.play-button {
-    background-color: #4caf50; /* Success color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 15px;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
+<!-->
+.thanks {
+    margin-bottom: 40px;
+    padding: 25px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: grid;
+    place-items: center;
 }
 
-.play-button:hover {
-    background-color: #43a047;
+.thanks:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    display: grid;
+    place-items: center;
+    background-color: #c5cae9;
+}
+
+.thanks h2 {
+    color: #3f51b5;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3f51b5;
+    padding-bottom: 10px;
+    font-weight: 600;
+    display: grid;
+    place-items: center;
+    background-color: #ccc;
+
+}
+
+.thanks p {
+    color: #555;
+    margin-bottom: 20px;
+    display: grid;
+    place-items: center;
+}
+.tha
+<!-->
+
+.audio-player {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
 }
 
 .more-read {
-    color: #00bcd4; /* Accent color */
+    color: #00bcd4;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -79,7 +110,7 @@ body {
 }
 
 .pdf-tab h3 {
-    color: #f44336; /* Error/Alert color */
+    color: #f44336;
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.1em;
@@ -100,9 +131,9 @@ body {
 .feedback-section {
     margin-top: 40px;
     padding: 20px;
-    border-top: 2px solid #ffc107; /* Warning/Feedback color */
+    border-top: 2px solid #ffc107;
     border-radius: 8px;
-    background-color: #fffde7; /* Light background for feedback */
+    background-color: #fffde7;
 }
 
 .feedback-section h2 {
@@ -112,9 +143,56 @@ body {
     font-weight: 600;
 }
 
-.feedback-section p {
-    color: #777;
+.feedback-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
 }
+
+.feedback-section input[type="text"],
+.feedback-section input[type="email"],
+.feedback-section textarea {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.feedback-section button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-section button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.feedback-section #feedbackMessage {
+    font-weight: bold;
+} 
+.clik {
+  text-decoration: none;
+  background-color: #25D366;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  -webkit-text-fill-color: #1a0081;
+}
+
+a:hover {
+  background-color: #1DA335;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -126,9 +204,121 @@ body {
         padding: 20px;
         margin-bottom: 30px;
     }
-    .play-button, .more-read {
+    .more-read {
         margin-right: 10px;
-        margin-bottom: 5px; /* Add some space below inline elements on smaller screens */
-        display: inline-block; /* Prevent them from stacking too much */
+        margin-bottom: 5px;
+        display: inline-block;
     }
+}
+
+/* Style for the main contact content container */
+.contact-content {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 30px; /* Add some space below the section */
+}
+
+/* Style for the "Contact Us" heading */
+.contact-content h2 {
+    color: #333; /* Dark gray heading text */
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff; /* Blue underline for visual separation */
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Style for the introductory text */
+.contact-content p {
+    color: #555; /* Medium gray paragraph text */
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Style for the "Our Office" and "Call Us" subheadings */
+.contact-content h3 {
+    color: #333;
+    font-size: 1.6em;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Style for the office address */
+.contact-content .office-address {
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Style for the phone number links */
+.contact-content .phone-link {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+    font-weight: 500;
+    display: block; /* Make each link appear on a new line */
+    margin-bottom: 5px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.contact-content .phone-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+/* Style for the phone number description (e.g., Customer Service) */
+.contact-content .phone-description {
+    color: #777;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+/* Media query for better responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .contact-content {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .contact-content h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+
+    .contact-content p {
+        font-size: 0.95em;
+        margin-bottom: 20px;
+    }
+
+    .contact-content h3 {
+        font-size: 1.4em;
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+
+    .contact-content .office-address {
+        font-size: 0.9em;
+        margin-bottom: 15px;
+    }
+
+    .contact-content .phone-link {
+        font-size: 0.95em;
+        margin-bottom: 3px;
+    }
+
+    .contact-content .phone-description {
+        font-size: 0.85em;
+        margin-left: 8px;
+    }
+    h3{
+        font-weight: bold;
+        font-size: large;
+        color: #0097a7;
+        font-style: italic;
+    }
+    
 }

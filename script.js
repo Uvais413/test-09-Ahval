@@ -1,24 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const playButtons = document.querySelectorAll('.play-button');
+    const feedbackForm = document.getElementById('feedbackForm');
+    const feedbackMessage = document.getElementById('feedbackMessage');
+    const googleSheetURL = 'https://script.google.com/macros/s/AKfycbwG8CUp69cILyaj_wuSbME8uQKss6oW9dXOL_4lOGSWxUHNFP899qyKtTOI1U3CE5a3/exec'; // Replace with your actual URL
 
-    playButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const voiceId = this.dataset.voice;
-            const paragraphText = this.previousElementSibling.textContent;
+    if (feedbackForm) {
+        feedbackForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
 
-            // Implement your voice playback logic here
-            // You can use the Web Speech API or handle pre-recorded audio
+            const formData = new FormData(feedbackForm);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
 
-            if ('speechSynthesis' in window) {
-                const utterance = new SpeechSynthesisUtterance(paragraphText);
-                // You can set the language of the utterance here if needed
-                // utterance.lang = 'en-US'; // Example for English
-                speechSynthesis.speak(utterance);
-            } else {
-                alert('Text-to-speech not supported in this browser.');
-            }
-
-            console.log('Playing voice for:', voiceId, 'Text:', paragraphText); // For debugging
+            fetch(googleSheetURL, {
+                method: 'POST',
+                mode: 'no-cors', // May be needed depending on your setup
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                console.log('Feedback submitted successfully!', response);
+                feedbackMessage.textContent = 'Feedback submitted successfully!';
+                feedbackForm.reset(); // Clear the form
+            })
+            .catch(error => {
+                console.error('Error submitting feedback:', error);
+                feedbackMessage.textContent = 'Error submitting feedback. Please try again later.';
+                feedbackMessage.style.color = 'red';
+            });
         });
-    });
+    }
 });
